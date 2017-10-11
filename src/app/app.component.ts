@@ -1,7 +1,9 @@
+import { TabsPage } from '../pages/tabs/tabs';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 
 
@@ -20,7 +22,7 @@ export class MyApp {
 
       this.auth.Session.subscribe(session=>{
         if(session){
-            this.rootPage = 'MisTabsPage';
+            this.rootPage = TabsPage;
         }
           else{
             this.rootPage = 'LoginPage';
